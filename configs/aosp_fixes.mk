@@ -31,3 +31,10 @@ else
 PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
+
+# Camera Effects for devices without a vendor partition
+ifneq ($(filter shamu,$(TARGET_DEVICE)),)
+PRODUCT_COPY_FILES +=  \
+    vendor/flash/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/flash/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+endif
