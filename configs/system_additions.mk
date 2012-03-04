@@ -12,12 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/flash/configs/aosp_fixes.mk
-include vendor/flash/configs/custom_main.mk
-include vendor/flash/configs/system_additions.mk
-
-# Telephony packages
-PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver
-
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/flash/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/flash/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
