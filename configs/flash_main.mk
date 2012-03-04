@@ -20,3 +20,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapersPicker
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/flash/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/flash/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
