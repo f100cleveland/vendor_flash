@@ -1,4 +1,5 @@
 # Copyright (C) 2016 The Pure Nexus Project
+# Copyright (C) 2016 Flash ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/flash/configs/aosp_fixes.mk
-include vendor/flash/configs/bootanimation.mk
-include vendor/flash/configs/custom_main.mk
-include vendor/flash/configs/system_additions.mk
-include vendor/flash/configs/version.mk
+ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)
+ROM_NAME := flash_rom
 
-# Telephony packages
-PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver
-
-# Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
+    ro.rom.version=$(ROM_VERSION)
 
-# Thank you, please drive thru!
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.dun.override=0
