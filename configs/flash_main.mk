@@ -49,3 +49,6 @@ PRODUCT_COPY_FILES += \
 O3_OPTS := true
 STRICT_ALIASING := true
 GRAPHITE_OPTS := true
+
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
