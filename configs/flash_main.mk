@@ -27,6 +27,14 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapersPicker
 
+# DU Utils Library
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
