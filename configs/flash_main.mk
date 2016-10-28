@@ -27,6 +27,10 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapersPicker
 
+# Custom Packages
+PRODUCT_PACKAGES += \
+    ThemeInterfacer
+
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
