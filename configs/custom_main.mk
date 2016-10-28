@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
 
 # Custom Packages
 PRODUCT_PACKAGES += \
-    Busybox
+    Busybox \
+    masquerade
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
