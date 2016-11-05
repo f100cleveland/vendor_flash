@@ -27,3 +27,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
+
+# Add blacked out Pixel bootanimation based on device
+ifneq ($(filter shamu angler,$(TARGET_DEVICE)),)
+    PRODUCT_COPY_FILES += \
+        vendor/flash/prebuilt/zip/bootanimation.zip:system/media/bootanimation.zip
+endif
