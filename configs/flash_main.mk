@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+HOSTNAME := $(shell uname -n)
+ifeq ($(HOSTNAME),flashbox)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := .keys/releasekey
+endif
+
 # ROM versioning
 FLASH_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)
 
