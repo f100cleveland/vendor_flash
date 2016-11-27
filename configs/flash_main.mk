@@ -44,3 +44,8 @@ PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/flash/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/flash/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+
+# Export optimization flags
+O3_OPTS := true
+STRICT_ALIASING := true
+GRAPHITE_OPTS := true
