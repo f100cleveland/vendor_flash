@@ -42,3 +42,8 @@ GRAPHITE_OPTS := true
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
+
+# Copy Superuser files
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/sbin/su:root/sbin/su \
+    vendor/flash/prebuilt/app/Superuser/Superuser.apk:system/app/Superuser/Superuser.apk
