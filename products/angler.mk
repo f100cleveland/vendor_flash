@@ -25,6 +25,13 @@ PRODUCT_DEVICE := angler
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
 
+# Copy over our ramdisk files
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/etc/init.flash.rc:root/init.flash.rc \
+    vendor/flash/prebuilt/etc/init.performance_profiles.rc:root/init.performance_profiles.rc \
+    vendor/flash/prebuilt/etc/init.special_power.sh:root/init.special_power.sh \
+    vendor/flash/prebuilt/etc/msm_irqbalance.conf:root/msm_irqbalance.conf
+
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
