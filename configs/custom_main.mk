@@ -38,12 +38,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils
 
-# Export optimization flags
-O3_OPTS := true
-STRICT_ALIASING := true
-POLLY_OPTS := true
-GRAPHITE_OPTS := true
-
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 

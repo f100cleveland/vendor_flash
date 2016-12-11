@@ -25,6 +25,12 @@ PRODUCT_DEVICE := bullhead
 PRODUCT_MODEL := Nexus 5X
 PRODUCT_MANUFACTURER := LGE
 
+# Export optimization flags
+O3_OPTS := true
+STRICT_ALIASING := true
+POLLY_OPTS := true
+GRAPHITE_OPTS := true
+
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bullhead \

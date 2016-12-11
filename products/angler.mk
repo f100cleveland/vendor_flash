@@ -25,6 +25,12 @@ PRODUCT_DEVICE := angler
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
 
+# Export optimization flags
+O3_OPTS := true
+STRICT_ALIASING := true
+POLLY_OPTS := true
+GRAPHITE_OPTS := true
+
 # Copy over our ramdisk files
 PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/etc/init.flash.rc:root/init.flash.rc \
