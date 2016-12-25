@@ -48,3 +48,9 @@ PRODUCT_COPY_FILES += \
 # Add Superuser APK
 PRODUCT_PACKAGES += \
     Superuser
+
+# Build Substratum unless SUBSTRATUM is set to false
+ifneq ($(SUBSTRATUM),false)
+    PRODUCT_PACKAGES += \
+        Substratum
+endif
