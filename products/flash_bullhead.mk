@@ -19,7 +19,7 @@ include vendor/flash/configs/custom_phone.mk
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := bullhead
+PRODUCT_NAME := flash_bullhead
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := bullhead
 PRODUCT_MODEL := Nexus 5X

@@ -15,24 +15,30 @@
 # Include custom telephony configuration
 include vendor/flash/configs/custom_phone.mk
 
-# Inherit AOSP device configuration for shamu.
-$(call inherit-product, device/moto/shamu/aosp_shamu.mk)
+# Inherit AOSP device configuration for angler
+$(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := shamu
+PRODUCT_NAME := flash_angler
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := shamu
-PRODUCT_MODEL := Nexus 6
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_DEVICE := angler
+PRODUCT_MODEL := Nexus 6P
+PRODUCT_MANUFACTURER := Huawei
 
 # Export optimization flags
 O3_OPTS := true
 STRICT_ALIASING := true
-POLLY_OPTS := false
+POLLY_OPTS := true
 GRAPHITE_OPTS := true
+
+# Copy over our ramdisk files
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/etc/init.flash.rc:root/init.flash.rc \
+    vendor/flash/prebuilt/etc/init.special_power.sh:root/init.special_power.sh \
+    vendor/flash/prebuilt/etc/msm_irqbalance.conf:root/msm_irqbalance.conf
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=shamu \
-    BUILD_FINGERPRINT=google/shamu/shamu:7.0/NBD91U/3408911:user/release-keys \
-    PRIVATE_BUILD_DESC="shamu-user 7.0 NBD91U 3408911 release-keys"
+    PRODUCT_NAME=angler \
+    BUILD_FINGERPRINT=google/angler/angler:7.1.1/N4F26J/3549317:user/release-keys \
+    PRIVATE_BUILD_DESC="angler-user 7.1.1 N4F26J 3549317 release-keys"
