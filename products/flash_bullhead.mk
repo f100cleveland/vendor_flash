@@ -1,4 +1,5 @@
 # Copyright (C) 2016 The Pure Nexus Project
+# Copyright (C) 2017 Flash ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +14,7 @@
 # limitations under the License.
 
 # Include custom telephony configuration
-include vendor/flash/configs/custom_phone.mk
+include vendor/flash/configs/flash_phone.mk
 
 # Inherit AOSP device configuration for bullhead
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)

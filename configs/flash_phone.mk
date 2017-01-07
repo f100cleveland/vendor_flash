@@ -14,7 +14,7 @@
 
 include vendor/flash/configs/aosp_fixes.mk
 include vendor/flash/configs/bootanimation.mk
-include vendor/flash/configs/custom_main.mk
+include vendor/flash/configs/flash_main.mk
 include vendor/flash/configs/system_additions.mk
 include vendor/flash/configs/version.mk
 
