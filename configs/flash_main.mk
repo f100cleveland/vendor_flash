@@ -54,3 +54,7 @@ ifneq ($(SUBSTRATUM),false)
     PRODUCT_PACKAGES += \
         Substratum
 endif
+
+# OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
