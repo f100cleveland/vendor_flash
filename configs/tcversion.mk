@@ -8,11 +8,14 @@ endif
 
 ifeq (linux,$(HOST_OS))
   PROP_CLANG_VERSION := $(shell prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(LLVM_PREBUILTS_VERSION)/bin/clang --version | grep "clang " | cut -d ' ' -f 3 2>&1)
+  PROP_CLANG_DATE := $(shell git -C prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(LLVM_PREBUILTS_VERSION) log -1 --format="%s" | cut -d ' ' -f 3 2>&1)
+
+  PROP_CLANG_TEXT := $(PROP_CLANG_VERSION)-$(PROP_CLANG_DATE)
 
   ADDITIONAL_BUILD_PROPERTIES += \
-    ro.build.clang=$(PROP_CLANG_VERSION)
+    ro.build.clang=$(PROP_CLANG_TEXT)
 
-  $(info Clang version for build.prop: '$(PROP_CLANG_VERSION)')
+  $(info Clang version for build.prop: '$(PROP_CLANG_TEXT)')
 
   ifeq (arm,$(TARGET_ARCH))
 
