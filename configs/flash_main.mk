@@ -41,10 +41,6 @@ PRODUCT_PACKAGES += \
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
-# Copy Superuser binary
-PRODUCT_COPY_FILES += \
-    vendor/flash/prebuilt/sbin/su:root/sbin/su \
-
 # Add Superuser APK
 PRODUCT_PACKAGES += \
     Superuser
@@ -58,3 +54,11 @@ endif
 # OmniStyle
 PRODUCT_PACKAGES += \
     OmniStyle
+
+# Magisk Manager
+PRODUCT_PACKAGES += \
+    MagiskManager
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
