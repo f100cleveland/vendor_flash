@@ -25,9 +25,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
-# Custom Packages
+# Masquerade for Substratum
 PRODUCT_PACKAGES += \
-    Busybox \
     masquerade
 
 # DU Utils Library
