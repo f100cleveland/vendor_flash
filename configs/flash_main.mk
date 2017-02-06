@@ -41,10 +41,6 @@ PRODUCT_PACKAGES += \
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
-# Add Superuser APK
-PRODUCT_PACKAGES += \
-    Superuser
-
 # Build Substratum unless SUBSTRATUM is set to false
 ifneq ($(SUBSTRATUM),false)
     PRODUCT_PACKAGES += \
