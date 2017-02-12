@@ -57,3 +57,7 @@ PRODUCT_PACKAGES += \
 # Copy Magisk zip
 PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+
+# Build OmniSwitch
+PRODUCT_PACKAGES += \
+    OmniSwitch
