@@ -34,7 +34,8 @@ PRODUCT_PACKAGES += \
 # Custom Packages
 PRODUCT_PACKAGES += \
     ThemeInterfacer \
-    OmniStyle
+    OmniStyle \
+    OmniSwitch
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
