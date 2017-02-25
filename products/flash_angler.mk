@@ -29,7 +29,6 @@ PRODUCT_MANUFACTURER := Huawei
 # Export optimization flags
 O3_OPTS := true
 STRICT_ALIASING := true
-POLLY_OPTS := true
 GRAPHITE_OPTS := true
 
 # Copy over our ramdisk files

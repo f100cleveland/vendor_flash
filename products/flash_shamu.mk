@@ -28,7 +28,6 @@ PRODUCT_MANUFACTURER := motorola
 # Export optimization flags
 O3_OPTS := true
 STRICT_ALIASING := true
-POLLY_OPTS := false
 GRAPHITE_OPTS := true
 
 # Device Fingerprint
