@@ -47,7 +47,7 @@ RMT_STORAGE=`pidof rmt_storage`
 QMUXD=`pidof qmuxd`
 QTI=`pidof qti`
 NETMGRD=`pidof netmgrd`
-THERMAL-ENGINE=`pidof thermal-engine`
+THERMALENGINE=`pidof thermal-engine`
 WPA_SUPPLICANT=`pidof wpa_supplicant`
 LOC_LAUNCHER=`pidof loc_launcher`
 QSEECOMD=`pidof qseecomd`
@@ -62,7 +62,7 @@ writepid_sbg $RMT_STORAGE
 writepid_sbg $QMUXD
 writepid_sbg $QTI
 writepid_sbg $NETMGRD
-writepid_sbg $THERMAL-ENGINE
+writepid_sbg $THERMALENGINE
 writepid_sbg $WPA_SUPPLICANT
 writepid_sbg $LOC_LAUNCHER
 writepid_sbg $QSEECOMD
