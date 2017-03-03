@@ -68,6 +68,13 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.ime.theme_id=5
 
+# ThemeInterfacer sig check override
+# Default value is false
+# Setting to true so that my debug APKs get recognized without toggling the
+# switch in Advanced Settngs. Plus I don't care about security :P
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.interfacer.buildtype.check=true
+
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
