@@ -96,41 +96,10 @@ on property:sys.boot_completed=1
    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2054400
    chmod 0444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
 
-   # Heimdall's v4 profile
-   # Little cluster settings
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 95
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "0 672000:20000 960000:40000 1344000:50000"
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 50000
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 672000
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack -1
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "95 384000:88 460800:80 600000:77 672000:79 768000:79 864000:70 960000:90 1248000:89 1344000:97 1478400:99 1555200:100"
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 60000
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost 0
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows 0
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 0
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 80000
-   write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 0
-
-   # Big cluster settings
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 20
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay "20000 960000:40000 1632000:50000"
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 50000
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 633600
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack -1
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "95 384000:45 480000:37 633600:74 768000:73 864000:74 960000:90 1248000:81 1344000:50 1440000:79 1536000:95 1632000:89 1728000:95 1824000:94 1958400:99"
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 60000
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost 0
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/align_windows 0
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 0
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 80000
-   write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 0
-
    # Input boost configuration
    write /sys/module/cpu_boost/parameters/input_boost_enabled 1
-   write /sys/module/cpu_boost/parameters/input_boost_freq "0:600000 1:600000 2:600000 3:600000 4:633600 5:633600 6:633600 7:633600"
-   write /sys/module/cpu_boost/parameters/input_boost_ms 666
+   write /sys/module/cpu_boost/parameters/input_boost_freq "0:960000 1:960000 2:960000 3:960000 4:0 5:0 6:0 7:0"
+   write /sys/module/cpu_boost/parameters/input_boost_ms 60
 
    # Core control disabled, msm_thermal enabled
    write /sys/module/msm_thermal/core_control/enabled 0
@@ -177,9 +146,6 @@ on property:sys.boot_completed=1
    write /sys/module/lpm_levels/system/a57/cpu7/retention/idle_enabled 1
    write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 1
    write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 1
-
-   # Enable Laptop Mode
-   write /proc/sys/vm/laptop_mode 1
 
    # bcmdhd wakeup sources
    write /sys/module/wakeup/parameters/enable_wlan_rx_wake_ws 0
