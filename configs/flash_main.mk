@@ -53,9 +53,11 @@ ifneq ($(HAS_SUBSTRATUM),false)
         Substratum
 endif
 
-# OmniStyle
+# Omni packages
 PRODUCT_PACKAGES += \
-    OmniStyle
+    OmniJaws \
+    OmniStyle \
+    OmniSwitch
 
 # Only build with Magisk if HAS_ROOT is not equal to false
 ifneq ($(HAS_ROOT),false)
@@ -67,7 +69,3 @@ ifneq ($(HAS_ROOT),false)
     PRODUCT_COPY_FILES += \
         vendor/flash/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
 endif
-
-# Build OmniSwitch
-PRODUCT_PACKAGES += \
-    OmniSwitch
