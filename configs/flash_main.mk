@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
 # Custom Packages
 PRODUCT_PACKAGES += \
     ThemeInterfacer \
+    OmniJaws \
     OmniStyle \
     OmniSwitch
 
