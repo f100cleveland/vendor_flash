@@ -13,10 +13,7 @@
 # limitations under the License.
 
 include vendor/flash/configs/aosp_fixes.mk
-include vendor/flash/configs/bootanimation.mk
 include vendor/flash/configs/flash_main.mk
-include vendor/flash/configs/system_additions.mk
-include vendor/flash/configs/version.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \
@@ -27,9 +24,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
-# Pull in Prebuilt applications for phones
-$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
-
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
+
+# Add blacked out Pixel bootanimation based on device
+ifneq ($(filter shamu angler,$(TARGET_DEVICE)),)
+    PRODUCT_COPY_FILES += \
+        vendor/flash/prebuilt/zip/1440.zip:system/media/bootanimation.zip
+endif

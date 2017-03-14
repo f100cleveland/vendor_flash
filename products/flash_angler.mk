@@ -33,9 +33,9 @@ GRAPHITE_OPTS := true
 
 # Copy over our ramdisk files
 PRODUCT_COPY_FILES += \
-    vendor/flash/prebuilt/etc/init.flash.rc:root/init.flash.rc \
-    vendor/flash/prebuilt/etc/init.special_power.sh:root/init.special_power.sh \
-    vendor/flash/prebuilt/etc/msm_irqbalance.conf:root/msm_irqbalance.conf
+    vendor/flash/prebuilt/ramdisk/init.flash.rc:root/init.flash.rc \
+    vendor/flash/prebuilt/ramdisk/init.special_power.sh:root/init.special_power.sh \
+    vendor/flash/prebuilt/ramdisk/msm_irqbalance.conf:root/msm_irqbalance.conf
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
