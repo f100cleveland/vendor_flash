@@ -59,3 +59,8 @@ GRAPHITE_OPTS := true
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
+
+# XML packages
+PRODUCT_PACKAGES += \
+    libtinyxml \
+    libxml2
