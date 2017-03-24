@@ -75,6 +75,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.interfacer.buildtype.check=true
 
+# Build Substratum unless HAS_SUBSTRATUM is set to false
+ifneq ($(HAS_SUBSTRATUM),false)
+    PRODUCT_PACKAGES += \
+        Substratum
+endif
+
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
