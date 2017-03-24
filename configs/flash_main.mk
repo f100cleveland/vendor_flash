@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# ROM versioning
+FLASH_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d-%H%M)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.flash.version=$(FLASH_VERSION)
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/flash/overlay/common
