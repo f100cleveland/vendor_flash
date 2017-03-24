@@ -15,6 +15,14 @@
 # Include custom telephony configuration
 include vendor/flash/configs/flash_phone.mk
 
+# Copy over our ramdisk files
+PRODUCT_COPY_FILES += \
+    vendor/flash/prebuilt/ramdisk/init.flash.rc:root/init.flash.rc \
+    vendor/flash/prebuilt/ramdisk/init.profiles.rc:root/init.profiles.rc \
+    vendor/flash/prebuilt/ramdisk/init.profiles.sh:root/init.profiles.sh \
+    vendor/flash/prebuilt/ramdisk/init.special_power.sh:root/init.special_power.sh \
+    vendor/flash/prebuilt/ramdisk/msm_irqbalance.conf:root/msm_irqbalance.conf
+
 # Inherit AOSP device configuration for angler
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
