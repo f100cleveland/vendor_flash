@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     OmniSwitch
 
+# Prebuilt applications
+PRODUCT_PACKAGES += \
+    PixelLauncherPrebuilt
+
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
