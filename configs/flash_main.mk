@@ -100,11 +100,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils
 
-# Backup Tool
+# Backup Tool and adb network files
 PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/flash/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/flash/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/flash/prebuilt/etc/init.adb_network.rc:root/init.adb_network.rc
 
 # Export optimization flags
 O3_OPTS := true
