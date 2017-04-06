@@ -25,7 +25,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
-    LiveWallpapersPicker
+    LiveWallpapersPicker \
+    Turbo
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += \
