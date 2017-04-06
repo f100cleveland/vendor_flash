@@ -24,6 +24,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
+    AnglerSetupWizard \
     Launcher3 \
     LiveWallpapersPicker \
     Turbo
