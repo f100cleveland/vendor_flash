@@ -23,6 +23,10 @@ PRODUCT_COPY_FILES += \
     vendor/flash/prebuilt/ramdisk/init.special_power.sh:root/init.special_power.sh \
     vendor/flash/prebuilt/ramdisk/msm_irqbalance.conf:root/msm_irqbalance.conf
 
+# Include Spectrum APK
+PRODUCT_PACKAGES += \
+    Spectrum
+
 # Inherit AOSP device configuration for angler
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
