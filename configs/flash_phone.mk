@@ -14,6 +14,7 @@
 
 include vendor/flash/configs/aosp_fixes.mk
 include vendor/flash/configs/flash_main.mk
+include vendor/flash/sepolicy/sepolicy.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \
